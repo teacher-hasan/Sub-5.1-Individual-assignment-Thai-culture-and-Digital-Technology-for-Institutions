@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fueling Our Future: Petroleum and the Sufficiency Path</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .chart-container {
+            position: relative;
+            width: 100%;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            height: 350px;
+            max-height: 400px;
+        }
+        @media (min-width: 768px) {
+            .chart-container {
+                height: 400px;
+            }
+        }
+        .flowchart-item {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .flowchart-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        }
+        .kpi-card {
+            transition: transform 0.3s ease, background-color 0.3s ease;
+        }
+        .kpi-card:hover {
+            transform: scale(1.05);
+        }
+        .principle-card {
+            border-left-width: 4px;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+    <div class="container mx-auto p-4 md:p-8">
+
+        <header class="text-center mb-12">
+            <h1 class="text-4xl md:text-6xl font-black text-gray-900 mb-2">Fueling Our Future</h1>
+            <p class="text-xl md:text-2xl text-[#008c9e]">A Journey Through Petroleum and the Sufficiency Path</p>
+        </header>
+
+        <main>
+            <section id="introduction" class="mb-16">
+                <div class="bg-white rounded-lg shadow-lg p-6 md:p-8 text-center">
+                    <h2 class="text-2xl font-bold text-[#d84a05] mb-4">The Hidden Energy in Your Day</h2>
+                    <p class="text-lg mb-6 max-w-3xl mx-auto">From the motorbike that takes you to school and the gas that cooks your breakfast, to the plastic in your phone case, petroleum is an invisible but essential part of our modern Thai life. This infographic explores the science behind this powerful resource and how we can use it wisely, guided by our own cultural wisdom.</p>
+                    <div class="grid grid-cols-2 md:grid-cols-4 gap-4 text-center text-gray-700">
+                        <div class="flex flex-col items-center">
+                            <span class="text-4xl mb-2">🛵</span>
+                            <p class="font-semibold">Transport</p>
+                        </div>
+                        <div class="flex flex-col items-center">
+                            <span class="text-4xl mb-2">🍳</span>
+                            <p class="font-semibold">Cooking</p>
+                        </div>
+                        <div class="flex flex-col items-center">
+                            <span class="text-4xl mb-2">📱</span>
+                            <p class="font-semibold">Plastics</p>
+                        </div>
+                        <div class="flex flex-col items-center">
+                            <span class="text-4xl mb-2">🛣️</span>
+                            <p class="font-semibold">Infrastructure</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="science" class="mb-16">
+                <h2 class="text-3xl font-bold text-center mb-8">The Science: From Ancient Seas to a Modern Refinery</h2>
+                <div class="bg-white rounded-lg shadow-lg p-6 md:p-8">
+                    <h3 class="text-xl font-bold text-[#008c9e] mb-4">The Journey of Crude Oil</h3>
+                    <p class="mb-8">Crude oil is a non-renewable resource formed over millions of years from the remains of tiny marine organisms. The journey from deep underground to useful products involves extraction, transportation, and a complex refining process.</p>
+                    <div class="relative flex flex-col md:flex-row justify-around items-center space-y-8 md:space-y-0 md:space-x-4">
+                        <div class="absolute top-1/2 left-0 w-full h-1 bg-[#f0c808] hidden md:block"></div>
+                        <div class="relative z-10 flex flex-col items-center text-center flowchart-item bg-white p-4 rounded-lg">
+                            <div class="text-5xl mb-2">🌊</div>
+                            <h4 class="font-bold text-lg">1. Formation</h4>
+                            <p class="text-sm max-w-xs">Tiny marine life buried under heat and pressure for millions of years.</p>
+                        </div>
+                        <div class="relative z-10 flex flex-col items-center text-center flowchart-item bg-white p-4 rounded-lg">
+                            <div class="text-5xl mb-2">🏭</div>
+                            <h4 class="font-bold text-lg">2. Extraction</h4>
+                            <p class="text-sm max-w-xs">Drilling deep underground or under the sea to extract crude oil.</p>
+                        </div>
+                        <div class="relative z-10 flex flex-col items-center text-center flowchart-item bg-white p-4 rounded-lg">
+                             <div class="text-5xl mb-2">🚢</div>
+                            <h4 class="font-bold text-lg">3. Transportation</h4>
+                            <p class="text-sm max-w-xs">Moved by giant ships (tankers) to refineries around the world.</p>
+                        </div>
+                        <div class="relative z-10 flex flex-col items-center text-center flowchart-item bg-white p-4 rounded-lg">
+                            <div class="text-5xl mb-2">🔥</div>
+                            <h4 class="font-bold text-lg">4. Refining</h4>
+                            <p class="text-sm max-w-xs">Separated into useful products using Fractional Distillation.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="refining" class="mb-16">
+                <div class="bg-white rounded-lg shadow-lg p-6 md:p-8">
+                    <h3 class="text-2xl font-bold text-center text-[#d84a05] mb-2">Inside the Refinery: Fractional Distillation</h3>
+                    <p class="text-center max-w-3xl mx-auto mb-8">Crude oil is heated to over 400°C and the resulting vapor rises through a tall tower. As it cools, different products condense at different temperatures based on their boiling points. This process separates the complex mixture into many useful fuels and materials.</p>
+                    <div class="w-full">
+                        <div class="chart-container mx-auto">
+                            <canvas id="refiningProductsChart"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="culture" class="mb-16">
+                <h2 class="text-3xl font-bold text-center mb-8">A Path to Wise Use: The Sufficiency Economy Philosophy</h2>
+                <div class="bg-white rounded-lg shadow-lg p-6 md:p-8">
+                    <div class="text-center mb-8">
+                        <p class="text-lg max-w-3xl mx-auto">Gifted to the Thai people by His Majesty King Bhumibol Adulyadej The Great (Rama IX), this philosophy guides us toward a balanced and sustainable way of life. It is built on three core principles, supported by knowledge and virtue.</p>
+                    </div>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                        <div class="principle-card border-[#f0c808] bg-gray-50 p-6 rounded-lg">
+                            <h4 class="font-bold text-xl mb-2">Moderation (พอประมาณ)</h4>
+                            <p>Not too much, not too little. Finding the "just right" amount and avoiding wastefulness in our consumption.</p>
+                        </div>
+                        <div class="principle-card border-[#008c9e] bg-gray-50 p-6 rounded-lg">
+                            <h4 class="font-bold text-xl mb-2">Reasonableness (มีเหตุผล)</h4>
+                            <p>Making decisions based on careful consideration of the causes, effects, and potential outcomes for ourselves and society.</p>
+                        </div>
+                        <div class="principle-card border-[#d84a05] bg-gray-50 p-6 rounded-lg">
+                            <h4 class="font-bold text-xl mb-2">Self-Immunity (มีภูมิคุ้มกันที่ดี)</h4>
+                            <p>Building resilience to prepare for future changes and challenges, whether they are economic, social, or environmental.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <section id="analysis" class="mb-16">
+                <h2 class="text-3xl font-bold text-center mb-8">Lesson Impact: Analyzing Student Understanding</h2>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div class="md:col-span-1 bg-white rounded-lg shadow-lg p-6 flex flex-col justify-center items-center text-center">
+                        <h3 class="text-xl font-bold text-[#008c9e] mb-4">Overall Class Performance</h3>
+                        <p class="text-7xl font-black text-[#d84a05]">79.1%</p>
+                        <p class="text-lg font-semibold text-gray-700">Average Quiz Score</p>
+                        <p class="mt-4 text-sm">This strong average across 23 students indicates that the core instructional objectives were successfully met for the majority of the class.</p>
+                    </div>
+                    <div class="md:col-span-2 bg-white rounded-lg shadow-lg p-6">
+                        <h3 class="text-xl font-bold text-center text-[#008c9e] mb-4">Performance by Cognitive Skill</h3>
+                        <p class="text-center text-sm mb-4">The data shows excellent recall of facts, but highlights an opportunity to strengthen higher-order thinking and application skills.</p>
+                        <div class="chart-container mx-auto h-80 md:h-96">
+                            <canvas id="performanceBySectionChart"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="action" class="mb-16">
+                 <div class="bg-white rounded-lg shadow-lg p-8 text-center">
+                    <h2 class="text-2xl font-bold text-[#d84a05] mb-4">Our Sufficiency Action Plan: Applying Moderation</h2>
+                    <p class="text-lg mb-6 max-w-3xl mx-auto">Knowing the science is the first step. Wisdom is applying that knowledge. By practicing **moderation**, we can make small, conscious choices that have a big impact on reducing petroleum consumption.</p>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 text-left">
+                        <div class="kpi-card bg-[#e6f4f6] p-6 rounded-lg flex items-center space-x-4">
+                            <span class="text-4xl">🚶‍♂️</span>
+                            <div>
+                                <h4 class="font-bold">Choose Human Power</h4>
+                                <p class="text-sm">Walk or bike for short distances instead of using a motorbike. This directly saves gasoline.</p>
+                            </div>
+                        </div>
+                        <div class="kpi-card bg-[#fff9e6] p-6 rounded-lg flex items-center space-x-4">
+                            <span class="text-4xl">♻️</span>
+                            <div>
+                                <h4 class="font-bold">Reduce Single-Use Plastics</h4>
+                                <p class="text-sm">Use reusable water bottles and shopping bags. This reduces demand for Naphtha, the raw material for plastics.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+        </main>
+
+        <footer class="text-center mt-12 pt-8 border-t border-gray-300">
+            <p class="text-gray-600">An infographic by MD Showket Hasan's Grade 9 Fuel Energy Class</p>
+            <p class="text-sm text-gray-500">Chalermkwansatree School, Phitsanulok</p>
+        </footer>
+
+    </div>
+
+    <script>
+        const tooltipTitleCallback = (tooltipItems) => {
+            const item = tooltipItems[0];
+            let label = item.chart.data.labels[item.dataIndex];
+            if (Array.isArray(label)) {
+                return label.join(' ');
+            }
+            return label;
+        };
+
+        const wrapLabel = (label) => {
+            const maxLength = 16;
+            if (label.length <= maxLength) return label;
+            
+            const words = label.split(' ');
+            let lines = [];
+            let currentLine = '';
+
+            words.forEach(word => {
+                if ((currentLine + word).length > maxLength) {
+                    lines.push(currentLine.trim());
+                    currentLine = '';
+                }
+                currentLine += word + ' ';
+            });
+            lines.push(currentLine.trim());
+            return lines;
+        };
+        
+        const palette = {
+            blue: '#008c9e',
+            orange: '#d84a05',
+            yellow: '#f0c808',
+            lightBlue: '#54c5d4',
+            lightYellow: '#f7e57c',
+            darkGray: '#333333',
+            lightGray: '#f0f0f0'
+        };
+
+        const refiningProductsCtx = document.getElementById('refiningProductsChart').getContext('2d');
+        new Chart(refiningProductsCtx, {
+            type: 'bar',
+            data: {
+                labels: ['LPG', 'Gasoline', ['Kerosene', '(Jet Fuel)'], 'Diesel', ['Heavy', 'Fuel Oil'], ['Bitumen', '(Asphalt)']],
+                datasets: [{
+                    label: 'Boiling Point (°C)',
+                    data: [20, 70, 170, 270, 370, 420],
+                    backgroundColor: [
+                        palette.lightBlue,
+                        palette.blue,
+                        '#007a8a',
+                        '#006875',
+                        palette.orange,
+                        palette.darkGray
+                    ],
+                    borderColor: '#ffffff',
+                    borderWidth: 2
+                }]
+            },
+            options: {
+                indexAxis: 'y',
+                maintainAspectRatio: false,
+                scales: {
+                    x: {
+                        beginAtZero: true,
+                        title: {
+                            display: true,
+                            text: 'Condensation Temperature (°C)',
+                            font: { size: 14 }
+                        },
+                        grid: {
+                            color: 'rgba(0,0,0,0.05)'
+                        }
+                    },
+                    y: {
+                        ticks: {
+                           font: { size: 12 }
+                        },
+                        grid: {
+                            display: false
+                        }
+                    }
+                },
+                plugins: {
+                    legend: {
+                        display: false
+                    },
+                    title: {
+                        display: true,
+                        text: 'Products from Coolest (Top) to Hottest (Bottom)',
+                        font: { size: 16, weight: 'bold' },
+                        padding: { top: 10, bottom: 20 }
+                    },
+                    tooltip: {
+                        callbacks: {
+                            title: tooltipTitleCallback
+                        }
+                    }
+                }
+            }
+        });
+
+        const performanceCtx = document.getElementById('performanceBySectionChart').getContext('2d');
+        const performanceLabels = [
+            'Knowledge', 
+            'True/False', 
+            'Matching', 
+            wrapLabel('Error Identification'), 
+            wrapLabel('What is it? (Riddles)'), 
+            'Analytical'
+        ];
+
+        new Chart(performanceCtx, {
+            type: 'bar',
+            data: {
+                labels: performanceLabels,
+                datasets: [{
+                    label: 'Average Correctness',
+                    data: [91, 85, 94, 68, 88, 64],
+                    backgroundColor: [
+                        palette.blue,
+                        palette.lightBlue,
+                        palette.blue,
+                        palette.orange,
+                        palette.lightBlue,
+                        palette.yellow
+                    ],
+                    borderColor: '#ffffff',
+                    borderWidth: 2,
+                    borderRadius: 5
+                }]
+            },
+            options: {
+                maintainAspectRatio: false,
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        max: 100,
+                        title: {
+                            display: true,
+                            text: 'Average Score (%)',
+                            font: { size: 14 }
+                        },
+                        grid: {
+                            color: 'rgba(0,0,0,0.05)'
+                        }
+                    },
+                    x: {
+                       ticks: {
+                           font: { size: 12 }
+                        },
+                         grid: {
+                            display: false
+                        }
+                    }
+                },
+                plugins: {
+                    legend: {
+                        display: false
+                    },
+                    tooltip: {
+                        callbacks: {
+                            title: tooltipTitleCallback
+                        }
+                    }
+                }
+            }
+        });
+    </script>
+</body>
+</html>
